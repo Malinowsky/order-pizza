@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ORDER YOUR PIZZA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background:#F9AE3E">
+
+    <img src="pizza.jpg" WIDTH="500px" style="position: fixed; margin: 100px 200px ;" class="img-thumbnail" alt="Cinque Terre" background="#F6A122">
+    <form th:action="@{/pizzas}" th:object="${pizza}" method="POST">
+        <div style="width: 200px; position:absolute; margin: 200px 800px ;">
+            <nav class="navbar " style="background: white; border-radius:5px;">
+                <a data-toggle="dropdown" style="font-family: 'Gill Sans MT Condensed'; font-size: 30px"> DOUGH
+                </a>
+                <li>
+                    <div class="dropdown-menu" style="font-family: 'Gill Sans MT Condensed'; font-size: 25px;">
+                        <a class="dropdown-item" href="#">Classic</a>
+                        <a class="dropdown-item" href="#">Multigrain</a>
+                        <a class="dropdown-item" href="#">Gluten free</a>
+                        <a class="dropdown-item" href="#">
+                            <input type="text" name="dough" th:field="*{dough}" placeholder=" Write your dough " >
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </nav>
+        </div>
+        <div style="width: 200px; position:absolute; margin: 200px 1100px ;">
+            <nav class="navbar " style="background: white; border-radius:5px;">
+                <a data-toggle="dropdown" style="font-family: 'Gill Sans MT Condensed'; font-size: 30px"> BASE SAUCE
+                </a>
+                <li>
+                    <div class="dropdown-menu" style="font-family: 'Gill Sans MT Condensed'; font-size: 25px;">
+                        <a class="dropdown-item" href="#">Pelatti</a>
+                        <a class="dropdown-item" href="#">Pelatti sharp</a>
+                        <a class="dropdown-item" href="#">Cream</a>
+                        <a class="dropdown-item" href="#">Pesto</a>
+                        <a class="dropdown-item" href="#">
+                            <input type="text" name="dough" th:field="*{baseSauce}" placeholder=" Write your dough " >
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </nav>
+        </div>
+        <div style="width: 200px; position:absolute; margin: 200px 1400px ;">
+            <nav class="navbar " style="background: white; border-radius:5px;">
+                <a data-toggle="dropdown" style="font-family: 'Gill Sans MT Condensed'; font-size: 30px"> CHEESES
+                </a>
+                <li>
+                    <div class="dropdown-menu" style="font-family: 'Gill Sans MT Condensed'; font-size: 25px;">
+                        <a class="dropdown-item" href="#">Mozzarella</a>
+                        <a class="dropdown-item" href="#">Vegan mozzarella </a>
+                        <a class="dropdown-item" href="#">Vegan Greek cheese</a>
+                        <a class="dropdown-item" href="#">Ricotta</a>
+                        <a class="dropdown-item" href="#">Smoked Gouda</a>
+                        <a class="dropdown-item" href="#">Gorgonzola</a>
+                        <a class="dropdown-item" href="#">Cheddar</a>
+                        <a class="dropdown-item" href="#">Mascarpone</a>
+                        <a class="dropdown-item" href="#">
+                            <input type="text" name="dough" th:field="*{cheese}" placeholder=" Write your dough " >
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </nav>
+        </div>
+        <div style="width: 210px; position:absolute; margin: 400px 800px ;">
+            <nav class="navbar " style="background: white; border-radius:5px;">
+                <a data-toggle="dropdown" style="font-family: 'Gill Sans MT Condensed'; font-size: 30px">ORIGINAL SAUCES
+                </a>
+                <li>
+                    <div class="dropdown-menu" style="font-family: 'Gill Sans MT Condensed'; font-size: 25px;">
+                        <a class="dropdown-item" href="#">Mozzarella</a>
+                        <a class="dropdown-item" href="#">Vegan mozzarella </a>
+                        <a class="dropdown-item" href="#">Vegan Greek cheese</a>
+                        <a class="dropdown-item" href="#">Ricotta</a>
+                        <a class="dropdown-item" href="#">Smoked Gouda</a>
+                        <a class="dropdown-item" href="#">Gorgonzola</a>
+                        <a class="dropdown-item" href="#">Cheddar</a>
+                        <a class="dropdown-item" href="#">Mascarpone</a>
+                        <a class="dropdown-item" href="#">
+                            <input type="text" name="dough" th:field="*{orgSauces}" placeholder=" Write your dough " >
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </nav>
+        </div>
+        <div style="width: 200px; position:absolute; margin: 400px 1100px ;">
+            <nav class="navbar " style="background: white; border-radius:5px;">
+                <a data-toggle="dropdown" style="font-family: 'Gill Sans MT Condensed'; font-size: 30px">VEGETABLES
+                </a>
+                <li>
+                    <div class="dropdown-menu" style="font-family: 'Gill Sans MT Condensed'; font-size: 25px;">
+                        <a class="dropdown-item" href="#">Mozzarella</a>
+                        <a class="dropdown-item" href="#">Vegan mozzarella </a>
+                        <a class="dropdown-item" href="#">Vegan Greek cheese</a>
+                        <a class="dropdown-item" href="#">Ricotta</a>
+                        <a class="dropdown-item" href="#">Smoked Gouda</a>
+                        <a class="dropdown-item" href="#">Gorgonzola</a>
+                        <a class="dropdown-item" href="#">Cheddar</a>
+                        <a class="dropdown-item" href="#">Mascarpone</a>
+                        <a class="dropdown-item" href="#">
+                            <input type="text" name="dough" th:field="*{vegetables}" placeholder=" Write your dough " >
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </nav>
+        </div>
+        <div style="width: 200px; position:absolute; margin: 400px 1400px ;">
+            <nav class="navbar " style="background: white; border-radius:5px;">
+                <a  data-toggle="dropdown" style="font-family: 'Gill Sans MT Condensed'; font-size: 30px">FINISH
+                </a>
+                <li>
+                    <div class="dropdown-menu" style="font-family: 'Gill Sans MT Condensed'; font-size: 25px;">
+                        <a class="dropdown-item" href="#">Mozzarella</a>
+                        <a class="dropdown-item" href="#">Vegan mozzarella </a>
+                        <a class="dropdown-item" href="#">Vegan Greek cheese</a>
+                        <a class="dropdown-item" href="#">Ricotta</a>
+                        <a class="dropdown-item" href="#">Smoked Gouda</a>
+                        <a class="dropdown-item" href="#">Gorgonzola</a>
+                        <a class="dropdown-item" href="#">Cheddar</a>
+                        <a class="dropdown-item" href="#">Mascarpone</a>
+                        <a class="dropdown-item" href="#">
+                            <input type="text" name="dough" th:field="*{finish}" placeholder=" Write your dough " >
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </nav>
+        </div>
+        <div style="width: 250px; position:absolute; margin: 600px 800px ;">
+            <nav class="navbar " style="background: white; border-radius:5px;">
+                <a data-toggle="dropdown" style="font-family: 'Gill Sans MT Condensed'; font-size: 30px"> MEAT AND NOT MEAT
+                </a>
+                <li>
+                    <div class="dropdown-menu" style="font-family: 'Gill Sans MT Condensed'; font-size: 25px;">
+                        <a class="dropdown-item" href="#">Mozzarella</a>
+                        <a class="dropdown-item" href="#">Vegan mozzarella </a>
+                        <a class="dropdown-item" href="#">Vegan Greek cheese</a>
+                        <a class="dropdown-item" href="#">Ricotta</a>
+                        <a class="dropdown-item" href="#">Smoked Gouda</a>
+                        <a class="dropdown-item" href="#">Gorgonzola</a>
+                        <a class="dropdown-item" href="#">Cheddar</a>
+                        <a class="dropdown-item" href="#">Mascarpone</a>
+                        <a class="dropdown-item" href="#">
+                            <input type="text" name="dough" th:field="*{meat}" placeholder=" Write your dough " >
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+            </nav>
+        </div>
+
+        <div style="width: 500px; position:absolute; margin: 600px 1100px ;">
+            <nav class="navbar " style="background: white; border-radius:5px; font-family: 'Gill Sans MT Condensed'; font-size: 25px">
+                <input type="text" name="dough" th:field="*{string}" placeholder=" Write your remarks " style="width: 500px">
+
+            </nav>
+        </div>
+    </form>
+    <form>
+        <div style="width: 500px; position:absolute; margin: 700px 1100px ;">
+            <div class="box-footer">
+                <a th:href="@{/pizzas/order}"
+                   class="btn btn-primary">ENTER YOUR PIZZA AND MOVE ON</a>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
